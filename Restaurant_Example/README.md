@@ -1,3 +1,11 @@
 # Example shown in the classroom
 
-Code still has some issues and needs improving capturing data from the user. It is carrying \n to the next char.
+Get the user option for a restaurant meal
+
+Verify if the choice is valid
+
+Confirm that the client really wants the chosen meal
+
+Confirm that the order is being processed
+
+Exit
