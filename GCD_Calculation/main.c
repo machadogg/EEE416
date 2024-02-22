@@ -1,6 +1,6 @@
 /******************************************************************************
 
-Euclidian Algorithm to calculate the Greatest Common Sivider between X and Y, where
+Euclidian Algorithm to calculate the Greatest Common Divider between X and Y, where
 X > Y and Y !=0.
 
 1 - Divide X/Y, if the reminder (R1) is 0, the GCD is Y
@@ -16,17 +16,17 @@ passing by value and passing by reference to a function.
 
 int main(){
     
-    int X, Y, GCD, oX, oY;
+    int x, y, result;
+    int original[2];
     
-
-    getNumbers(&X,&Y);
-        
-    oX = X;
-    oY = Y;
+    getNumbers(&x, &y);
     
-    GCD = calculateMDC(X,Y);
+    original[0] = x;
+    original[1] = y;
     
-    printf("\nThe MDC between %d and %d is %d",oX,oY,GCD);
+    result = calculateGCD(x,y);
+    
+    printf("The GCD between %d and %d is %d", original[0], original[1], result);
     
     getchar();
     getchar();
@@ -34,3 +34,4 @@ int main(){
     return 0;
     
 }
+

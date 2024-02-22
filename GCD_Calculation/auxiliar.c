@@ -1,34 +1,30 @@
 #include "auxiliar.h"
 
-
-void getNumbers(int *BigNum, int *SmallNum){
-
+void getNumbers(int *BigNumber, int *SmallNumber){
+    
     do{
         
-        printf("Choose two numbers to calculate the MDC, X and Y, where X > Y and Y!= 0: ");
-        scanf("%d %d",BigNum,SmallNum);
+        printf("\nChoose two numbers to calculate the GCD, where the first is greater than the second, and the second is !=0: ");
+        scanf("%d %d",BigNumber,SmallNumber);
         
-    }while((*BigNum<*SmallNum) || *SmallNum < 1);
-
+    }while((*BigNumber < *SmallNumber) || *SmallNumber == 0);
+    
 }
 
-
-int calculateMDC(int BigNum, int SmallNum){
+int calculateGCD(int X, int Y){
     
-    int Remind = 1;
+    int Remind, GCD;
     
-    int GCD;
-    
+    Remind = 1; // Any number different from 0
     
     while(Remind != 0){
         
-        Remind = BigNum%SmallNum;
-        GCD = SmallNum;
-        BigNum = SmallNum;
-        SmallNum = Remind;
+        Remind = X%Y;
+        GCD = Y;
+        X = Y;
+        Y = Remind;
         
     }
     
     return GCD;
-    
 }

@@ -1,5 +1,5 @@
-#include <stdio.h>
+#include<stdio.h>
 
-int calculateMDC(int BigNum, int SmallNum);
+void getNumbers(int *BigNumber, int *SmallNumber);
 
-void getNumbers(int *BigNum, int *SmallNum);
+int calculateGCD(int X, int Y);
