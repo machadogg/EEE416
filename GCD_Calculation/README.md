@@ -13,3 +13,6 @@ X > Y and Y !=0.
 3 - If R2 != 0, divide R1/R2, if the reminder (R3) is 0, the GCD is R2
 
 4 - If Rn != 0, divide (Rn-1)/(Rn), if the reminder (Rn+1) is 0, the GCD is Rn
+
+### In this example, we will practice the difference between do while, and while and
+passing by value and passing by reference to a function.
