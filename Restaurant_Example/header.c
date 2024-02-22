@@ -1,22 +1,23 @@
 #include "header.h"
 
-int chooseOption(){
+int chooseOption(){ // Returns an integer which is the selection from the user.
     
     int selection;
 
-    
+    /* do while, this loop runs the selection option at least once
+    and repeats it in case the user types an invalid number.*/
 
     do{
-        selection = printMenu();
+        selection = printMenu(); // calls in the selection which is done within the function printMenu();
 
-        if (selection<1 || selection > 5){
+        if (selection<1 || selection > 5){ // If the input is out of range, then say it is invalid. || = OR
             printf("\nInvalid option!\n");
         }
     } while(selection<1 || selection > 5);
     return selection;
 }
 
-int printMenu(){
+int printMenu(){ //Prints the menu and gets the choice from the user returning an integer.
 
     int option;
     char op;
