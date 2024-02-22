@@ -14,5 +14,4 @@ X > Y and Y !=0.
 
 4 - If Rn != 0, divide (Rn-1)/(Rn), if the reminder (Rn+1) is 0, the GCD is Rn
 
-### In this example, we will practice the difference between do while, and while and
-passing by value and passing by reference to a function.
+### In this example, we will practice the difference between do while, and while and passing by value and passing by reference to a function.
