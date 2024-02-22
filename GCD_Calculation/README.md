@@ -2,7 +2,7 @@
 
 In this example, we want to calculate the Greatest Common Divider between two numbers. For this we use the following algorithm.
 
-## Euglidian algorithm to find the GCD, GCD(X,Y)
+## Euclidian algorithm to find the GCD, GCD(X,Y)
 
 X > Y and Y !=0.
 
