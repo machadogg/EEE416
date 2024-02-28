@@ -22,3 +22,4 @@ clean:
 clean_all:
 	echo "Removing all files"
 	rm *.o final
+	
