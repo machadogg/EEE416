@@ -7,6 +7,7 @@ Here you will practice:
 3. Pinters to pointers
 4. Passing multidimensional arrays by reference
 5. Using for loops to multiply to matrices
+6. Dynamic memory allocation
 
 Matrix A is NxM
 Matrix B is MxQ
@@ -18,4 +19,5 @@ Matrix B is MxQ
 - Both matrices are printed
 - Both matrices are multiplied and the result is printed
 
-## This application is not yet completed, DO NOT USE IT TO STUDY AS OF NOW.
+## The application currently works, but still needs improvement to overcome the
+## limitations from scanf
