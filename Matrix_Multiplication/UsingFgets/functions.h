@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 
+#define MAX 10
+
 void getDimensions(int *cols1, int *cols2, int *rows1, int *rows2);
 
 void getMatrix(int **Matrix, int rows, int cols);

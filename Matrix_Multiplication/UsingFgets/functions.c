@@ -12,32 +12,20 @@ myinteger = atoi(mystring);
 
 void getDimensions(int *cols1, int *cols2, int *rows1, int *rows2){
 
-	char value1[100];
-	char value2[100];
+	char value1[MAX];
+	char value2[MAX];
 	int pos;
 	printf("This application multiplies 2 matrices, M = AxB.\nA is an nXm matrix and B is an mXq matrix.");
-	printf("\nPlease enter the number of rows and columns for Matrix A: ");
+	printf("\nPlease enter the number of rows of Matrux A: ");
 	
-	fgets(value1,100*sizeof(char),stdin);//scanf("%d %d",rows1, cols1); //rows and cols are already pointers to the address, so & is not required.
+	fgets(value1,MAX*sizeof(char),stdin);//scanf("%d %d",rows1, cols1); //rows and cols are already pointers to the address, so & is not required.
 	value1[strcspn(value1, "\n")] = 0;
+	*rows1 = atoi(value1);
 	
-	for(int i = 0; i<100; i++){
-
-		if(value1[i] == " "){
-			pos = i+1;
-			break;
-		}
-	}
-
-	int j = pos;
-
-	while(value1[j] != 0 && value1[j] != " "){
-
-		value2[j] = value1[j];
-		j++;
-	}
-
-	value1[strcspn(value1, " ")] = 0;
+	printf("\nPlease enter the number of columns of Matrux A: ");
+	
+	fgets(value1,MAX*sizeof(char),stdin);//scanf("%d %d",rows1, cols1); //rows and cols are already pointers to the address, so & is not required.
+	value1[strcspn(value1, "\n")] = 0;
 
 	*rows1 = atoi(value1);
 	*cols1 = atoi(value2);
