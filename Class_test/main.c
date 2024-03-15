@@ -21,14 +21,24 @@ int main(){
         in between the dates
     */
 
+    do{
     printf("Please enter the month and year of the first reported case of chicken virus: ");
     scanf("%d %d",&iMonth, &iYear);
+    
+    if(iMonth<1 || iMonth >12){
+      printf("\nInvalid month number\n");
+    }
+  } while((iMonth<1 || iMonth >12));
+
     printf("You have entered: %d/%d.",iMonth,iYear);
     
     do{
         printf("\n\nPlease enter the month and year for the prediction. \nYear must be equal or greater the the first reported case: ");
         scanf("%d %d",&fMonth, &fYear);
-    } while(fYear < iYear);
+    if(fMonth<1 || fMonth >12){
+      printf("\nInvalid month number\n");
+    }
+    } while(fYear < iYear || fMonth<1 || fMonth >12);
     
     total_days = calculateDays(iMonth,iYear,fMonth,fYear);
     total_months = total_days/daysMonth;
@@ -58,9 +68,9 @@ int main(){
     for(int i = 0; i < total_months; i++){
 
         printf("\n\nStatistics for month #%d.\n",i+1);
-        printf("\nInfected chickens: %f %f.\n",totalCases[29+i*30-1],totalCases[29+i*30]);
-        printf("\nRecovered chickens: %f.\n",totalRecover[29+i*30]);
-        printf("\nDeceased chickens: %f.\n",totalDeaths[29+i*30]);
+        printf("\nInfected chickens: %.1f .\n",totalCases[29+i*30]);
+        printf("\nRecovered chickens: %.1f.\n",totalRecover[29+i*30]);
+        printf("\nDeceased chickens: %.1f.\n",totalDeaths[29+i*30]);
     }
 
     free(totalCases);
