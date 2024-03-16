@@ -40,12 +40,12 @@ int main(){
     }
     } while(fYear < iYear || fMonth<1 || fMonth >12);
     
-    total_days = calculateDays(iMonth,iYear,fMonth,fYear);
-    total_months = total_days/daysMonth;
+    total_days = calculateDays(iMonth,iYear,fMonth,fYear); // Goes into the function calculate days to get the number of days between months
+    total_months = total_days/daysMonth; // Then gets the number of days
 
-    totalCases = (double *)malloc(total_days * sizeof(double));
-    totalDeaths = (double*)malloc(total_days * sizeof(double));
-    totalRecover = (double*)malloc(total_days * sizeof(double));
+    totalCases = (double *)malloc(total_days * sizeof(double)); // Allocates the memory for the array, each element contains number of cases for each day
+    totalDeaths = (double*)malloc(total_days * sizeof(double)); // Same as above for the number of dead chickens every day
+    totalRecover = (double*)malloc(total_days * sizeof(double));// Same as above for the number of recovered chickens every day
     
     totalCases[0] = iCases;
     totalDeaths[0] = 0; // Chicken just got sick, no chicken has recoverd on day 0
@@ -57,14 +57,14 @@ int main(){
 
         
 
-        totalRecover[i] = .9*totalCases[i-1];
+        totalRecover[i] = .9*totalCases[i-1]; // 90% of the chickens recover
 
-        totalDeaths[i] = 0.1*totalCases[i-1];
-        totalCases[i] = totalCases[i-1]*4 - totalRecover[i];
-
+        totalDeaths[i] = 0.1*totalCases[i-1]; // 10% of the chickens die
+        totalCases[i] = totalCases[i-1]*4 - totalRecover[i]; // Each chicken spreads to 3 (3+1 originally infected) = 4
+                                                             // Then removes the total number of recovered chickens
     }
 
-    
+    // Prints the statistics for each month 
     for(int i = 0; i < total_months; i++){
 
         printf("\n\nStatistics for month #%d.\n",i+1);
@@ -72,7 +72,8 @@ int main(){
         printf("\nRecovered chickens: %.1f.\n",totalRecover[29+i*30]);
         printf("\nDeceased chickens: %.1f.\n",totalDeaths[29+i*30]);
     }
-
+    
+    // frees the memory
     free(totalCases);
     free(totalDeaths);
     free(totalRecover);
