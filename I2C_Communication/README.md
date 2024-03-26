@@ -8,4 +8,9 @@ The wire library is used to configure the I2C communication between both arduino
 2. Once the button is pressed, it transmits the ASCII code equivalent to the number of times the button was pressed.
 3. The receiver Arduino Uno gets the number and shows it in the LCD screen, using the LCD library.
 
+---
+
+### Link to the Tinkercad project: 
+
+*https://www.tinkercad.com/things/dn0CjhAEpbt-i2c-arduino-arduino/editel?returnTo=%2Fdashboard%2Fdesigns%2Fcircuits&sharecode=bx5b-Mu4I3L7F6QsDfFDvi6BN3Xo__RgcYxiIjIdqXM*
 
